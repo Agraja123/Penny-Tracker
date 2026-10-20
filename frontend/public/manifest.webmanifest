@@ -1,0 +1,10 @@
+{
+  "name": "Penny Tracker",
+  "short_name": "Penny",
+  "description": "Savings, expenses, bills, loans and budgets in one place",
+  "start_url": "/home",
+  "display": "standalone",
+  "background_color": "#FBF8F1",
+  "theme_color": "#0E7C66",
+  "icons": [{ "src": "/coin.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

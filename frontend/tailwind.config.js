@@ -1,0 +1,103 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+      },
+      keyframes: {
+        "coin-spin": {
+          "0%": { transform: "rotateY(0deg)" },
+          "100%": { transform: "rotateY(360deg)" },
+        },
+      },
+      animation: {
+        "coin-spin": "coin-spin 1.4s ease-in-out infinite",
+      },
+    },
+  },
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        penny: {
+          primary: "#0E7C66",
+          "primary-content": "#F2FBF7",
+          secondary: "#E8604C",
+          "secondary-content": "#FFF5F2",
+          accent: "#F0A93B",
+          "accent-content": "#2A1B02",
+          neutral: "#20302B",
+          "base-100": "#FBF8F1",
+          "base-200": "#F2ECDD",
+          "base-300": "#E7DFC9",
+          "base-content": "#20302B",
+          info: "#2F8FBF",
+          success: "#0E7C66",
+          warning: "#F0A93B",
+          error: "#D5473A",
+        },
+      },
+      {
+        "penny-dark": {
+          primary: "#2FBF96",
+          "primary-content": "#04241B",
+          secondary: "#FF8069",
+          "secondary-content": "#2B0A05",
+          accent: "#F5BE5C",
+          "accent-content": "#2A1B02",
+          neutral: "#141C1A",
+          "base-100": "#0F1613",
+          "base-200": "#182420",
+          "base-300": "#22322B",
+          "base-content": "#EAF3EF",
+          info: "#5FB8E0",
+          success: "#2FBF96",
+          warning: "#F5BE5C",
+          error: "#FF6B5E",
+        },
+      },
+      {
+        ocean: {
+          primary: "#1D6FB8",
+          "primary-content": "#F2F8FD",
+          secondary: "#F0803C",
+          "secondary-content": "#2B1304",
+          accent: "#2BB5A0",
+          "accent-content": "#032620",
+          neutral: "#1E2F3D",
+          "base-100": "#F4F9FD",
+          "base-200": "#E6EFF7",
+          "base-300": "#D3E1EE",
+          "base-content": "#1E2F3D",
+          info: "#2F8FBF",
+          success: "#1F9D6B",
+          warning: "#F0A93B",
+          error: "#D5473A",
+        },
+      },
+      {
+        sunset: {
+          primary: "#C2410C",
+          "primary-content": "#FFF7ED",
+          secondary: "#7C3AED",
+          "secondary-content": "#F5F0FF",
+          accent: "#F59E0B",
+          "accent-content": "#2A1B02",
+          neutral: "#3B2A22",
+          "base-100": "#FFF7ED",
+          "base-200": "#FDEBD6",
+          "base-300": "#F7D9B8",
+          "base-content": "#3B2A22",
+          info: "#2F8FBF",
+          success: "#15803D",
+          warning: "#F59E0B",
+          error: "#DC2626",
+        },
+      },
+    ],
+    darkTheme: "penny-dark",
+  },
+};

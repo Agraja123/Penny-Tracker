@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* App shell: on wide screens it renders like a phone-width panel centered
+   on a soft backdrop, so the same layout works for laptop and mobile. */
+.app-shell {
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .app-shell-frame {
+    max-width: 480px;
+    margin-inline: auto;
+    min-height: 100vh;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 24px 60px -20px rgba(20,40,35,0.25);
+  }
+  .app-shell-backdrop {
+    background: radial-gradient(circle at 50% 0%, #F2ECDD 0%, #E7DFC9 60%, #DCD2B8 100%);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(32, 48, 43, 0.2);
+  border-radius: 999px;
+}
+
+.pill-tab {
+  transition: all 0.2s ease;
+}
